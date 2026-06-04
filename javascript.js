@@ -48,6 +48,26 @@ Skriv noen eksempler der du tester disse operatorene.
 
 // Skriv koden for oppgave 3 her
 
+let firstNumber = 20;
+let secondNumber = 6;
+
+console.log(firstNumber + secondNumber);
+console.log(firstNumber - secondNumber);
+console.log(firstNumber * secondNumber);
+console.log(firstNumber / secondNumber);
+
+firstNumber++;
+console.log(firstNumber);
+
+secondNumber--;
+console.log(secondNumber);
+
+firstNumber += 10;
+console.log(firstNumber);
+
+secondNumber -= 2;
+console.log(secondNumber);
+
 /******************************************************************************
 OPPGAVE 4
 
@@ -69,13 +89,31 @@ Prøv å endre verdiene på variablene for å sikre at IF/ELSE-setningen din
 håndterer alle tilfeller korrekt.
 ******************************************************************************/
 
-let userName = "";
+let userName = "Alice";
 let userAge = 18;
 let userIsLoggedIn = false;
 let userIsBlocked = false;
 let goToPage = "";
 
 // Skriv koden for oppgave 4 her
+
+if (userName !== "" && userAge >= 18 && userIsBlocked === false) {
+  userIsLoggedIn = true;
+  goToPage = "/home";
+
+  console.log(`Welcome, ${userName}! You are logged in.`);
+  console.log(`Redirecting to: ${goToPage}`);
+} else {
+  userIsLoggedIn = false;
+
+  if (userName === "") {
+    console.log("Login failed. Username cannot be empty.");
+  } else if (userAge < 18) {
+    console.log(`Login failed. You must be 18 or older.`);
+  } else if (userIsBlocked === true) {
+    console.log(`Login failed. This user is blocked.`);
+  }
+}
 
 /******************************************************************************
 OPPGAVE 5
@@ -92,6 +130,10 @@ Prøv å endre userMale til både true og false og bruk console.log for å sjekk
 at betingelsen din fungerer som den skal.
 ******************************************************************************/
 
-const userMale = false;
+const userMale = true;
 
 // Skriv koden for oppgave 5 her
+
+const userTitle = userMale ? "Mr." : "Mrs.";
+
+console.log(userTitle);
