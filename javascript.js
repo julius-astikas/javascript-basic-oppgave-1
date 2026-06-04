@@ -24,7 +24,17 @@ Du kan velge hva innholdet i variablene skal være. Prøv å bruke både let og
 const når du definerer variablene.
 ******************************************************************************/
 
-// Skriv koden for oppgave 2 her
+// Koden for oppgave 2:
+
+const productName = "Keyboard";
+let productPrice = 500;
+const isAvailable = true;
+const productCategories = ["electronics", "computer", "accessory"];
+
+console.log(productName);
+console.log(productPrice);
+console.log(isAvailable);
+console.log(productCategories);
 
 /******************************************************************************
 OPPGAVE 3
